@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-main">
+              <ul>
+                <li>
+                  <a href="index.html" class="">INICIO</a>
+                </li>
+                <li>
+                  <a id="alquilar"  href="alquilar.html">ALQUILER DE COCHES</a>
+                </li>
+                <li>
+                  <a href="registro.html">REGISTRO</a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+        <div>
+            <h1> <strong>HACER CHECK IN</strong></h1>
+            <input type="text" placeholder="Nombre" id="nombre">
+            <input type="text" placeholder="Apellido" id="apellido">
+            <input type="text" placeholder="DNI" id="dniCheckIn">
+            <input type="date" id="fechaCheckIn">
+            <input type="text" placeholder="Número del coche" id="numeroCheckIn">
+            <input type="text" placeholder="Matrícula" id="matricula">
+            <button onclick="reservar()">Reservar</button>
+            <div id="feedbackCheckIn"></div>
+        </div>
+       <!--  <div>
+            <h1> <strong>HACER CHECK OUT</strong></h1>
+            <input type="text" placeholder="dni" id="dniCheckOut">
+            <input type="date" id="fechaCheckOut">
+            <input type="text" placeholder="habitacion" id="habitacionCheckOut">
+            <button onclick="CheckOut()">Reservar</button>
+            <div id="feedbackCheckOut"></div>
+        </div> -->
+    </section>
+    </main>
+   <script src="alquilar.js"></script>
+</body>
+</html>
