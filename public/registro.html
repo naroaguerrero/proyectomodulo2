@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <nav class="nav-main">
-              <ul>
-                <li>
-                  <a  href="index.html" class="">INICIO</a>
-                </li>
-                <li>
-                  <a href="alquilar.html">ALQUILER DE COCHES</a>
-                </li>
-                <li>
-                  <a id="registro" href="registro.html">REGISTRO</a>
-                </li>
-              </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="nav-main">
+          <ul>
+            <li>
+              <a href="index.html" class="">INICIO</a>
+            </li>
+            <li>
+              <a href="alquilar.html">ALQUILER DE COCHES</a>
+            </li>
+            <li>
+              <a id="registro" href="registro.html">REGISTRO</a>
+            </li>
+            <li>
+              <a href="borrar.html">BORRAR USUARIO</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section>
+      <section>
+        <div>
+          <div id="form">
+            <h1><strong>REGISTRARSE</strong></h1>
+            <p>Nombre:</p>
+            <input class="input" type="text" placeholder="Nombre" id="nombre"/> <br />
+            <p>Apellido:</p>
+            <input class="input" type="text" placeholder="Apellido" id="apellido"/> <br />
+            <p>Edad:</p>
+            <input class="input" type="text" placeholder="Edad" id="edad"/> <br />
+            <p>DNI:</p>
+            <input class="input" type="text" placeholder="DNI" id="dni"/> <br />
+            <p>Usuario:</p>
+            <input class="input" type="text" placeholder="Usuario" id="usuario"/> <br />
+            <p>Contraseña:</p>
+            <input class="input" type="text" placeholder="Contraseña" id="password"/> <br />
+
+            <button id="botonEnviar" onclick="enviarInfo()">Aceptar</button>
             <div>
-                <h1> <strong>REGISTRO</strong></h1>
-                <input type="text" placeholder="Nombre" id="nombre">
-                <input type="text" placeholder="Apellido" id="apellido">
-                <input type="text" placeholder="edad" id="edad">
-                <input type="text" placeholder="carnet" id="carnet">
-                <input type="text" placeholder="usuario" id="usuario">
-                <button onclick="enviarInfo()">Registrarse</button>
-                <div>
-                    <div id="feedback"></div>
-                </div>
+              <div id="feedbackRegistro"></div>
             </div>
+          </div>
+        </div>
+
+        <div>
+          <div id="form">
+            <h1><strong>MODIFICAR USUARIO</strong></h1>
+            <p>Nombre:</p>
+            <input class="input" type="text" placeholder="Nombre" id="nombreModificar"/> <br />
+            <p>Apellido:</p>
+            <input class="input" type="text" placeholder="Apellido" id="apellidoModificar"/> <br />
+            <p>Edad:</p>
+            <input class="input" type="text" placeholder="Edad" id="edadModificar"/> <br />
+            <p>Usuario:</p>
+            <input class="input" type="text" placeholder="Usuario" id="usuarioModificar"/> <br />
+            <p>Contraseña:</p>
+            <input class="input" type="text" placeholder="Contraseña" id="passwordModificar"/> <br />
+
+            <button id="botonEnviar" onclick="modificarInfo()">Aceptar</button>
             <div>
-                <h1> <strong>MODIFICAR USUARIO</strong></h1>
-                <input type="text" placeholder="Nombre" id="nombreModificar">
-                <input type="text" placeholder="Apellido" id="apellidoModificar">
-                <input type="text" placeholder="edad" id="edadModificar">
-                <input type="text" placeholder="carnet" id="carnetModificar">
-                <input type="text" placeholder="usuario" id="usuarioModificar">
-                <button onclick="modificarInfo()">Modificar</button>
-                <div id="feedbackRegistro"></div>
+              <div id="feedbackModificar"></div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="registro.js"></script>
-</body>
+  </body>
 </html>
-

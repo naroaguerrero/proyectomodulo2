@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+//-------------RUTA GET: COCHES-------------
 router.get("/", function (req, res) {
     req.app.locals.db.collection("cars").find().toArray(function (err, datos) {
         if(err){
@@ -10,5 +11,6 @@ router.get("/", function (req, res) {
         }
     })
 })
+//------------------------------------------
 
 module.exports = router;

@@ -12,8 +12,8 @@ function mostrar() {
     });
 }
 
+//-------------FUNCIÓN: CARD INDEX-------------
 function imprimir(datos) {
-  //menuLocal = datos.contenido;
   let parrafo = "";
   for (let i = 0; i < datos.contenido.length; i++) {
     parrafo += `<div class="card">
@@ -25,12 +25,13 @@ function imprimir(datos) {
         <p>El número asociado a este coche para su posterior reserva es el: <strong>${datos.contenido[i].numero}</strong></p>
         <h3>${datos.contenido[i].precio}€/día</h3>
       </div>
-      <div class="card-stats" style="background-color:${datos.contenido[i].estado ==="Libre" ? "#20E85A" : "red"}">
+      <div class="card-stats" style="background-color:${datos.contenido[i].estado === "Libre" ? "#20E85A" : "red"}">
         <div class="stat">
-        <h3><strong>${datos.contenido[i].estado}</strong></h3>
+        ${datos.contenido[i].estado === "Libre" ? `<h3><strong><a id= "link" href="./alquilar.html">${datos.contenido[i].estado}</a></strong>` : `<h3><strong>${datos.contenido[i].estado}</strong></h3>`}
         </div>
       </div>
       </div>`;
   }
   document.getElementById("container").innerHTML = parrafo;
 }
+//--------------------------------------------
